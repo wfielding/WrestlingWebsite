@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .banner {
+        background: rgb(0, 39, 76);
+        position: fixed;
+        width: 100%;
+        overflow:scroll;
+        top:0;
+        margin: 0;
+      }
+      .banner_content {
+        color: rgb(255, 203, 5);
+        size: 32;
+        font-family: 'Georgia';
+        font-size: 24px;
+        text-decoration: none;
+      }
+      .site_link {
+        color: rgb(255, 203, 5);
+        size: 32;
+        font-family: 'Georgia';
+        font-size: 24px;
+        text-decoration: none;
+      }
+      .alignleft {
+        float: left;
+        margin-left: 10px;
+    }
+    .alignright {
+        float: right;
+        margin-right: 20px;
+    }
+</style>
+<center>
+    <div class="banner">
+    <!--<p class="site_link"><a class="site_link" href="/">Michigan Men's and Women's Club Wrestling</a> | <a class="site_link" href="/about">About</a> | <a class="site_link" href="/contact">Contact</a></p>-->
+        <div class="banner_content">
+            <p class="alignleft"> <a class="site_link" href="/">  Michigan Men's and Women's Club Wrestling</a></p>
+            <p class="alignright"><a class="site_link" href="/about">About</a> | <a class="site_link" href="/contact">Contact</a>   </p>
+          </div>
+    </div>
+    
+</center>
+<img src="{{url_for('get_image',url = 'img.jpg')}}" width=100% height=auto >
+<h1>What is the Michigan Men's and Women's Club Wrestling Team?</h1>
+<p>The Michigan Men's and Women's Club Wrestling Team is a student-lead organization dedicated to providing students an opportunity to wrestle at the collegiate level. Many of our members have years of wrestling experience, but we also welcome newcomers to the sport. We compete in the <a href="https://ncwa.net/">NCWA</a> league and host competition at <a href="https://mgoblue.com/sports/2017/6/16/cliff-keen-arena.aspx">Cliff Keen Arena</a> as well as travel around the Midwest to compete. Our season concludes at the NCWA National Tournament, usually held in Allen, Texas mid March.</p>
+</html>
