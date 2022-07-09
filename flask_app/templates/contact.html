@@ -23,21 +23,44 @@
         font-size: 24px;
         text-decoration: none;
       }
+      .alignleft {
+        float: left;
+        margin-left: 10px;
+    }
+    .alignright {
+        float: right;
+        margin-right: 20px;
+    }
 </style>
-<center>
-    <div class="banner">
-        <div class="banner_content">
-            <h1>Michigan Men's and Women's Club Wrestling</h1>
+<div class="banner">
+<!--<p class="site_link"><a class="site_link" href="/">Michigan Men's and Women's Club Wrestling</a> | <a class="site_link" href="/about">About</a> | <a class="site_link" href="/contact">Contact</a></p>-->
+    <div class="banner_content">
+        <p class="alignleft"> <a class="site_link" href="/">  Michigan Men's and Women's Club Wrestling</a></p>
+        <p class="alignright"><a class="site_link" href="/about">About</a> | <a class="site_link" href="/contact">Contact</a>  | <a class="site_link" href="/roster">Roster</a>{% if auth == "None" %} | <a class="site_link" href="/log_in">Log in</a>{% endif %}</p>
         </div>
-        <p class="site_link"><a class="site_link" href="/">Home</a> | <a class="site_link" href="/about">About</a> | <a class="site_link" href="/contact">Contact</a></p>
-    </div>
-</center>
+</div>
 <br>
 <br>
 <br>
 <br>
 <br>
+<p style="font-size:24px; font-family:serif">If you would like more information about the club or would like to join, you can contact any of our members below:
+    General Club Email: <a href="mailto: michiganwrestlingclub@gmail.com">michiganwrestlingclub@gmail.com</a></p>
+
 <br>
 <br>
+<b>Other Contacts</b>
+<p>Nico Romero, Alumni Outreach- <a href="mailto: ncromer@umich.edu">ncromer@umich.edu</a> </p>
+<p>Sam Janicki, Head Coach - <a href = "mailto: sjanicki@umich.edu">sjanicki@umich.edu </a></p>
+<p>Tom Evans, Co-Head Coach - <a href = "mailto: teevans@umich.edu">teevans@umich.edu</a> </p>
 <br>
-<h1>Work in Progress</h1>
+<br>
+<div style="float:left; margin:0">
+    
+    <a class="twitter-timeline" data-width="500" data-height="500" href="https://twitter.com/UMClubWrestling?ref_src=twsrc%5Etfw">Tweets by UMClubWrestling</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+<div style="float:right; margin: 0;">
+    <br>
+    <br>
+    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FUMclubwrestling%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+</div>
