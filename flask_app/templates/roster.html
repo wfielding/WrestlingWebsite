@@ -40,7 +40,7 @@
 <!--<p class="site_link"><a class="site_link" href="/">Michigan Men's and Women's Club Wrestling</a> | <a class="site_link" href="/about">About</a> | <a class="site_link" href="/contact">Contact</a></p>-->
     <div class="banner_content">
         <p class="alignleft"> <a class="site_link" href="/">  Michigan Men's and Women's Club Wrestling</a></p>
-        <p class="alignright"><a class="site_link" href="/about">About</a> | <a class="site_link" href="/contact">Contact</a>  | <a class="site_link" href="/Roster">Roster</a>{% if auth == "None" %} | <a class="site_link" href="/log_in">Log in</a>{% endif %}</p>
+        <p class="alignright"><a class="site_link" href="/about">About</a> | <a class="site_link" href="/contact">Contact</a>  | <a class="site_link" href="/roster">Roster</a>{% if auth == "None" %} | <a class="site_link" href="/log_in">Log in</a>{% endif %}</p>
         </div>
 </div>
 <div style="margin:15%;">
@@ -48,6 +48,9 @@
     Coaches
 </h1>
 <br>
+{% if auth == 'Admin' %}
+    <button style="margin-left:11%" onclick="location.href = '/add_coach'">Add Coach</button>
+{% endif%}
 <br>
 <br>
 {% for coach in coaches %}
@@ -57,6 +60,17 @@
     <p style="font-size:x-large;">{{coach.weight_class}}</p>
     <div style="width:25%; background-color:rgb(0, 39, 76); padding:.5%"><b style="text-align:left; margin:5%; font-size:x-large; color:rgb(255, 203, 5);"> {{coach.position}}</b></div>
     <br>
+    {% if auth == "Admin" %} 
+    <br>
+    
+    <div style="margin-left:6.5%">
+    <form action="/delete" method="post" enctype="multipart/form-data">
+        <input type="submit" name="delete" value="Remove from Roster"/>
+        <input type="hidden" name="username" value="{{coach.fullname}}"/>
+        <input type="hidden" name="operation" value="delete"/>
+    </form>
+    </div>
+    {% endif %}
     <br>
     </div>
 {% endfor %}
@@ -64,6 +78,9 @@
     Women's Team
 </h1>
 <br>
+{% if auth == 'Admin' %}
+    <button style="margin-left:11%" onclick="location.href = '/add_wrestler'">Add Wrestler</button>
+{% endif%}
 <br>
 <br>
 {% for woman in women %}
@@ -72,6 +89,17 @@
     <p style="font-size:x-large;">{{woman.fullname}}</p>
     <p style="font-size:x-large;">{{woman.weight_class}}</p>
     <div style="width:25%; background-color:rgb(0, 39, 76); padding:.5%"><b style="text-align:left; margin:5%; font-size:x-large; color:rgb(255, 203, 5);"> {{woman.year}}</b></div>
+    {% if auth == "Admin" %} 
+    <br>
+    
+    <div style="margin-left:6.5%">
+    <form action="/delete" method="post" enctype="multipart/form-data">
+        <input type="submit" name="delete" value="Remove from Roster"/>
+        <input type="hidden" name="username" value="{{woman.fullname}}"/>
+        <input type="hidden" name="operation" value="delete"/>
+    </form>
+    </div>
+    {% endif %}
     <br>
     <br>
     </div>
@@ -79,6 +107,9 @@
 <br>
 <h1>Men's Team</h1>
 <br>
+{% if auth == 'Admin' %}
+    <button style="margin-left:11%" onclick="location.href = '/add_wrestler'">Add Wrestler</button>
+{% endif%}
 <br>
 <br>
 {% for man in men %}
@@ -88,6 +119,17 @@
     <p style="font-size:x-large;">{{man.weight_class}}</p>
     <div style="width:25%; background-color:rgb(0, 39, 76); padding:.5%"><b style="text-align:left; margin:5%; font-size:x-large; color:rgb(255, 203, 5);"> {{man.year}}</b></div>
     <br>
+    {% if auth == "Admin" %} 
+    <br>
+    
+    <div style="margin-left:6.5%">
+    <form action="/delete" method="post" enctype="multipart/form-data">
+        <input type="submit" name="delete" value="Remove from Roster"/>
+        <input type="hidden" name="username" value="{{man.fullname}}"/>
+        <input type="hidden" name="operation" value="delete"/>
+    </form>
+    </div>
+    {% endif %}
     <br>
     </div>
 {% endfor %}
